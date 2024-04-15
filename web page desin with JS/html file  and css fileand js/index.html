@@ -1,0 +1,179 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web desin with js </title>
+    <link rel="stylesheet" href = "style.css">  
+    
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anymous"></script>
+</head>
+<body>
+    <div class="menu" id="container">
+        
+        <ul>
+            <li> <a class="active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+            <li> <a href="#"><i class="fa fa--clone" ></i>Services </a>
+            <div  class="submenu">
+                <ul>
+                    <li><a href="#"></a>Python</li>
+                    <li><a href="#"></a>Data analytic</li>
+                    <li><a href="#"></a>Java</li>
+                    <li><a href="#"></a>Digital marketing</li>
+
+                </ul>
+            </div>
+            </li>
+        
+            <li> <a href="#"><i class="fa fa-login"></i></a>Login</li>
+            <li> <a href="#"><i class="fa fa-login"></i> Clints </a>
+
+            <div class="submenu">
+            <ul>
+                <li><a href="#"></a>boost my sites</li>
+                <li><a href="#"></a>netzwork academy</li>
+                <li><a href="#"></a>codeer.com</li>
+                <li><a href="#"></a>newton school</li>
+             </ul>
+        </div>
+     </li>
+            <li><a href="#"> <i class="fa fa-contact"></i> Contact</a>
+
+            <div class="submenu">
+                <ul>
+                    <li><a href="#"></a>6362987764</li>
+                    <li><a href="#"></a>9910220212</li>
+                </ul>
+
+            </div>
+        </li>
+            <li><a href="#"><i class="fa fa-user"></i> About us </a>
+            <div class="submenu">
+                <ul>
+                    <li><a href="#"></a>all software taraing</li>
+                    <li><a href="#"></a>palacement assistence</li>
+                    <li><a href="#"></a>industry expert mentor</li>
+                    <li><a href="#"></a>real time projects"> </li>
+                </ul>
+            </div>
+    </ul>
+  </li>
+</div>
+
+    <div class="container" id="hidden">
+       
+
+
+        <div class="form-box">
+            <h1 id="title">sign up</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-feild" id="name">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="name">
+
+                    </div>
+                    <div class="input-feild">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="email">
+
+                    </div>
+                    <div class="input-feild">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="password">
+
+                    </div>
+                    <p>lost password <a href="#">click here</a></p>
+
+                </div>
+                <div class="btn-feild">
+                    <button type="btn" id="signupbtn">sign up</button>
+                    <button type="btn"  id= "signinbtn" class="disable">sign in</button>
+                </div>
+            </form>
+        </div>
+        
+    
+        
+
+    </div>
+    <div class="container">
+        <div class="calculter">
+            <form>
+                <div class="display">
+                    <input type="text" name="display">
+
+                </div>
+                <div>
+                    <input type="button" value="AC"  onclick="display.value=''">
+                    <input type="button" value="DE"  onclick="display.value=display.value.toString().slice(0,-1)">
+                    <input type="button" value="."  onclick="display.value='.'">
+                    <input type="button" value="/"  onclick="display.value='/'">
+                </div>
+                <div>
+                    
+                    <input type="button" value="7" onclick="display.value +='7'">
+                    <input type="button" value="8"  onclick="display.value +='8'">
+                    <input type="button" value="9"  onclick="display.value +='9'">
+                    <input type="button" value="*" onclick="display.value +='*'">
+
+                </div>
+                <div>
+                    <input type="button" value="4"  onclick="display.value +='4'">
+                    <input type="button" value="5"  onclick="display.value +='5'">
+                    <input type="button" value="6"  onclick="display.value += '6'">
+                    <input type="button" value="-" onclick="display.value +='-'">
+                </div>
+
+                <div>
+                    <input type="button" value="1"  onclick="display.value +='1'">
+                    <input type="button" value="2"  onclick="display.value +='2'">
+                    <input type="button" value="3"  onclick="display.value +='3'">
+                    <input type="button" value="+"  onclick="display.value +='+'">
+                </div>
+                <div>
+                    <input type="button" value="00"  onclick="display.value +='00'">
+                    <input type="button" value="0"  onclick="display.value +='0'">
+                    <input type="button" value="=" onclick="display.value = eval(display.value)" class="equal">
+                </div>
+            </form>
+
+        
+        </div>
+    </div>
+    
+</body>
+</html>
+
+    <script>
+
+
+        let signupbtn = document.getElementById("signupbtn");
+        let signinbtn = document.getElementById("signinbtn");
+        let name = document.getElementById("name");
+        let title = document.getElementById("title");
+
+
+        signinbtn.onclick = function(){
+
+            name.style.maxHeight="0";
+            title.innerHTML ="sign in";
+            signupbtn.classList.add("disable");
+            signinbtn.classList.remove("disable");
+
+        }
+        signupbtn.onclick = function(){
+
+           name.style.maxHeight="65px";
+           title.innerHTML ="sign up";
+           signupbtn.classList.remove("disable");
+           signinbtn.classList.add("disable");
+        }
+
+
+
+    </script>
+
+
+    
+</body>
+</html>
